@@ -70,7 +70,7 @@ def compute_BA(H, AB):
 def compute_OBP(H, AB, BB, HBP, SF):
     #########################################
     ## INSERT YOUR CODE HERE (3 points)
-    OBP = (H+BB+HBP)/AB
+    OBP = (H + BB + HBP)/(AB + BB + HBP + SF)
     #########################################
     return OBP
     #-----------------
@@ -208,7 +208,7 @@ def compute_runs(H, BB, TB, AB):
 def compute_wins(RC, RA):
     #########################################
     ## INSERT YOUR CODE HERE (4 points)
-    RC**2/(RC**2 + RA**2)
+    W = RC**2/(RC**2 + RA**2)
     #########################################
     return W
     #-----------------
