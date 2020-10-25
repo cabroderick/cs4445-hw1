@@ -160,7 +160,8 @@ def filter_height(X, t):
 def group_sum(X, k):
     #########################################
     ## INSERT YOUR CODE HERE (3 points)
-
+    Y = X.groupby(reset_index(k)) #NOT TESTED
+    Y.sum()
     #########################################
     return Y
     #-----------------
@@ -221,7 +222,7 @@ def group_sum(X, k):
 def merge(X, Y, k):
     #########################################
     ## INSERT YOUR CODE HERE (3 points)
-
+    J = pd.merge(X, Y, how='inner', on=k) #UNTESTED
     #########################################
     return J
     #-----------------
@@ -264,7 +265,7 @@ def merge(X, Y, k):
 def sort_values(X, k):
     #########################################
     ## INSERT YOUR CODE HERE (3 points)
-
+    X.sort_values(by=[k]) #UNTESTED
     #########################################
     return Y
     #-----------------
