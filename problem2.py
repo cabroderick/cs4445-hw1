@@ -160,7 +160,7 @@ def filter_height(X, t):
 def group_sum(X, k):
     #########################################
     ## INSERT YOUR CODE HERE (3 points)
-    Y = X.groupby(k).sum() #not correct
+    Y = X.groupby(k).sum().reset_index()
     #########################################
     return Y
     #-----------------
