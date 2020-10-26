@@ -160,8 +160,7 @@ def filter_height(X, t):
 def group_sum(X, k):
     #########################################
     ## INSERT YOUR CODE HERE (3 points)
-    Y = X.groupby(reset_index(k)) #NOT TESTED
-    Y.sum()
+    Y = X.groupby(k).sum() #not correct
     #########################################
     return Y
     #-----------------
@@ -222,7 +221,7 @@ def group_sum(X, k):
 def merge(X, Y, k):
     #########################################
     ## INSERT YOUR CODE HERE (3 points)
-    J = pd.merge(X, Y, how='inner', on=k) #UNTESTED
+    J = pd.merge(X, Y, how='inner', on=k)
     #########################################
     return J
     #-----------------
@@ -265,7 +264,7 @@ def merge(X, Y, k):
 def sort_values(X, k):
     #########################################
     ## INSERT YOUR CODE HERE (3 points)
-    X.sort_values(by=[k]) #UNTESTED
+    Y = X.sort_values(by=[k], ascending=False)
     #########################################
     return Y
     #-----------------
@@ -305,7 +304,7 @@ def sort_values(X, k):
 def divide(X, k, l):
     #########################################
     ## INSERT YOUR CODE HERE (3 points)
-
+    Y = X[k] / X[l]
     #########################################
     return Y
     #-----------------
@@ -345,7 +344,7 @@ def divide(X, k, l):
 def insert_column(X, y, k):
     #########################################
     ## INSERT YOUR CODE HERE (3 points)
-
+    X[k] = y
     #########################################
     #-----------------
     '''
