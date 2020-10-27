@@ -191,7 +191,7 @@ def compute_players_SLG(X10):
 def rank_players_SLG(X11):
     #########################################
     ## INSERT YOUR CODE HERE (3 points)
-
+    R3 = X11.sort_values(by='SLG', ascending=False)
     #########################################
     return R3
     #-----------------
